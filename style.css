@@ -1,94 +1,324 @@
-/*DOCUMENTO CSS - Projeto Card SDV*/
+/*PROJETO BIOGRAFIA*/
 
 * {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif; 
 }
 
-body {
-    font-family: 'Times New Roman', Times, serif;
-    color: black;
-    background-image: url(a.jpg);
-    background-size: cover;
+:root{
+    --cor1-azulclaro: #7387AD;
+    --cor2-preto: #010101;
+    --cor3-laranja: #E89E0B;
+    --cor4-laranjaclaro: #e9b03e;
+    --cor5-branco: #e3e3e3;
+    --cor6-azul-cinza: #394e73;
+    --cor7-branco2: #f1f1f1;
 }
 
-#topo {
-    height: 100%;
-    font-size: 420%;
-    text-shadow: 0.1em 0.1em 0.1em rgb(99, 94, 60);
+
+body{
+    min-height: 340vh;
+    height: 100vh;
+    background-color:var(--cor1-azulclaro);
 }
 
-#topo h1 {
+#linha_topo{
+    width: 100%;
+    top: 0;
+    position: fixed;
+}
+
+#topo{
+    background-color: var(--cor2-preto);
+    height: 12em;
     display: flex;
-    align-items: center;
     justify-content: center;
-    color: #fff75e;
+    align-items: center;
+    flex-direction: row;
 }
 
-#conteudo {
-    padding: 20px;
+#topo img{
+    margin-top: 0.7%;
+    width: 30%;
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu{
+    background-color: var(--cor3-laranja);
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    z-index: 1;
+}
+
+#menu ul{
+    list-style: none;
+}
+
+#menu ul li{
+    display: inline;
+}
+
+#menu ul li a{
+    display: inline-block;
+    padding: 10px 20px;
+    color: rgb(16, 16, 16);
+    font-size: 17px;
+}
+
+#menu ul li a:hover{
+    background-color: var(--cor4-laranjaclaro);
+}
+
+#conteudo{
+    padding: 4vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-.card {
+.card{
     width: 300px;
     height: 400px;
-    border: 1px solid rgb(31, 42, 112);
     padding: 5px;
-    margin: 10px;
+    margin: 20px;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px  #000000;
-    background-color: rgb(250, 247, 221);
+    box-shadow: 5px 5px 15px  var(--cor5-branco);
+    background-color: var(--cor6-azul-cinza);
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    transition-duration: 0.7s;
-
-}
-.card:hover{
-    scale: 1.3;
+    justify-content: space-around;
+    text-align: center;
 }
 
-.card figure {
-    width: 285px;
-    height: 285px;
-    background-color: rgb(13, 2, 61);
-    border-radius: 15px;
+#p1{
+    height: 100vh;
+    padding-top: 230px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.card figure img {
+#p1 h2{
+    font-size: 3.5em;
+    margin-left: 5vh;
+    text-align: center;
+}
+
+#p1 p{
+    font-size: 1.45em;
+    margin-left: 5vh;
+}
+.column{
+    float:left;
+    width: 33.33%;
+}
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.column.middle{
+    width: 68%;
+}
+
+.column.side{
+    width: 29%;
+}
+
+.column.side figure img{
     width: 100%;
     height: 100%;
+}
+.card p{
+    font-size: 1em;
+    display: flex;
+    text-align: center;
+}
+
+#p2{
+    height: 90vh;
+    padding-top: 280px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    float: left;
+}
+
+#p2 .card h2{
+    font-size: 1.7em;
+    color: var(--cor7-branco2);
+    margin-left: 2vh;
+    text-align: center;
+}
+
+#p2 .card p{
+    font-size: 1em;
+    color: var(--cor7-branco2);
+    display: flex;
+    text-align: center;
+}
+
+.card img{
+    margin: 2% 2% 2% 5%;
+    width: 90%;
+    height: 90%;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
-.card h2 {
-    font-size: 35px;
+#p3{
+    height: 100vh;
+    width: 100%;
+    padding-top: 260px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-items: center;
     text-align: center;
-    margin-top: 12px;
+    float:left;
+    
 }
 
-.card p {
-    font-size: 20px;
+#spotify{
+    width: 40%;
+    height: 100%;
+    margin-left: 0%;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: left;
+    flex-wrap: wrap;
+    flex-direction: row;
+    float: left;
+    padding: 0;
+}
+
+.disco{
+    width: 50%;
+    flex: 50%;
+}
+
+.disco #pa{
+    width: 100%;
+    height: 50%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-evenly;
+}
+
+.disco #pb{
+    width: 100%;
+    height: 50%;
+    margin-left: 2%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+#p4{
+    height: 100vh;
+    padding-top: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
     text-align: center;
 }
 
-#rodape {
-    background-color: #fcc75d;
-    height: 45px;
+#curiosidade{
+    width: 45%;
     display: flex;
     align-items: center;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    font-size: 1.6em;
+    float: left;
+}
+
+#mammamia{
+    width: 15%;
+    margin-left: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    float: left;
+}
+
+#rodape{
+    height: 120px;
+    background-color: var(--cor1-azulclaro);
+    font-size: 22px;
+    width: 100%;
+    display: flex;
     justify-content: center;
-    color: rgb(0, 0, 0);
-    font-size: 20px;
+    align-items: center;
+    flex-direction: row;
+    background-color: var(--cor1-azulclaro);
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#rodape a button {
+    background-color: var(--cor3-laranja); 
+    border-radius: 3em;
+    color: var(--cor2-preto);
+    padding: 0.85em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.85em;
+    margin-left: 5%;
+}
+
+#rodape #site{
+    width: 30%;
+    margin-right: 5%;
+}
+
+#rodape a img{
+    width: 5%;
+    height: 5%;
+    margin-left: 10%;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    float: left;
+}
+
+#rodape #redes{
+    width: 100%;
+    margin-left: 40%;
+    margin-right: 0%;
+
+}
+
+@media screen and (max-width: 600px) {
+    .column.middle, .column.side {
+        width: 100%;
+    }
 }
